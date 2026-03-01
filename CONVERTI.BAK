@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int main()
+{
+int n;
+char youcountry[10];
+char covertingcurrency[10];
+float result;
+clrscr();
+printf("Enter the amount");
+scanf("%d",&n);
+printf("Enter the coutry name (if india=ind,china=chi,pakistan=pak,america=usa)");
+scanf("%s",&youcountry);
+if(strcmp(youcountry,"ind")==0)
+{
+printf("Enter the converting currency name");
+scanf("%s",&covertingcurrency);
+if(strcmp(covertingcurrency,"usa")==0)
+{
+printf("ind to usa convertingcurrency");
+result=n*0.011;
+printf("ind of %d rupees is equal to the usa of %f",n,result);
+}
+else if(strcmp(covertingcurrency,"pak")==0)
+{
+printf("ind to pak convertingcurrency");
+result=n*3.08;
+printf("ind of %d rupees is equal to the pak of %f",n,result);
+}
+else if(strcmp(covertingcurrency,"chi")==0)
+{
+printf("ind to china convertingcurrency");
+result=n*0.076;
+printf("ind of %d rupees is equal to the china of %f",n,result);
+}
+}
+else if(strcmp(youcountry,"usa")==0)
+{
+if(strcmp(covertingcurrency,"ind")==0)
+{
+printf("usa of ind convertingcurrency");
+result=n*90.9;
+printf("usa of %d doller is equal to the ind  of %f",n,result);
+}
+else if(strcmp(covertingcurrency,"chi")==0)
+{
+printf("usa of china covertingcurrency");
+result=n*6.91;
+printf("usa of %d doller is equal to the chi of %f ",n,result);
+}
+}
+getch();
+return 0;
+}
+
